@@ -1,8 +1,4 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
   <router-view/>
 </template>
 
@@ -27,4 +23,25 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
+.footer{
+  margin-top: 10px;
+  border-radius: 25px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(64, 145, 86, 0.5);
+}
+
+.footer > p{
+  font-size: 2em;
+}
+
+#footer{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
 </style>
+<script setup>
+</script>
