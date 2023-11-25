@@ -46,17 +46,6 @@ export default {
 
 <style>
 
-div.post{
-  flex-wrap: nowrap;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: space-evenly;
-  margin-left: 0%;
-  margin-right: 0%;
-}
-
 div.posts{
   flex-wrap: nowrap;
   width: 50%;
