@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <p id="footer">Footer</p>
+    <p id="footer">&copy; Footer</p>
   </footer>
 </template>
 
@@ -18,7 +18,7 @@ export default {
 }
 
 .footer{
-  margin-top: 10px;
+  margin-top: 20px;
   border-radius: 25px;
   display: flex;
   width: 100%;
