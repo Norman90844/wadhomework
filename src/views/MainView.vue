@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Header/>
-    <Posts msg="Welcome to Your Vue.js App"/>
+    <Posts/>
     <Footer/>
   </div>
 </template>

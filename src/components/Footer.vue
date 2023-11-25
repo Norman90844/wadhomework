@@ -18,7 +18,7 @@ export default {
 }
 
 .footer{
-  margin-top: 10px;
+  margin-top: 20px;
   border-radius: 25px;
   display: flex;
   width: 100%;
