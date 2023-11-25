@@ -78,4 +78,14 @@ div.sidebar{
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 800px) {
+  .sidebar {
+    display: none;
+  }
+
+  div.posts {
+    width: 85%;
+  }
+}
 </style>
