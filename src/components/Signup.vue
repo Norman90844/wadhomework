@@ -54,7 +54,7 @@ export default {
   width: 25%;
   height: 50%;
   background-color: #dbd7da;
-  margin-top: 50px;
+  margin-top: 7%;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -62,7 +62,7 @@ export default {
   align-items: center;
   padding: 18px 25px;
   min-width: 300px;
-  margin-bottom: 70px;
+  margin-bottom: 7%;
   gap: 8px;
 }
 
