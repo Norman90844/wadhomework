@@ -2,13 +2,12 @@
   <div>
     <Header />
     <!-- List posts using the Post component -->
-
     <Post
-        v-for="post in posts"
+        v-for="post in getPosts"
         :key="post.id"
         :post="post"
     />
-    <button @click="resetLikes">Reset likes</button>
+    <button @click="resetLikes">Reset likes</button> <!-- This calls the Vuex action directly -->
     <Footer />
   </div>
 </template>
@@ -26,17 +25,12 @@ export default {
     Post
   },
   computed: {
-    ...mapGetters(['getPosts'])
+    ...mapGetters(['getPosts']) // Use the getter directly in the template
   },
   methods: {
-    ...mapActions(['resetAllLikes']),
-    resetLikes() {
-      this.resetAllLikes();
-    }
+    ...mapActions(['resetLikes']) // This adds resetLikes as a method
   },
-  created() {
-    this.posts = this.getPosts;
-  }
+  // You don't need the created hook to assign to data properties if you're using getPosts directly
 }
 </script>
 

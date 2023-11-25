@@ -3,7 +3,6 @@
     <div class="post-header">
       <img :src="require('@/assets/' + post.profilePic)" alt="Profile picture" class="profile-pic">
       <div class="post-details">
-        <h3>{{ post.authorName }}</h3>
         <p>{{ post.date }}</p>
       </div>
     </div>
