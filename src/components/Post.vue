@@ -1,19 +1,16 @@
 <template>
   <div class="post">
     <div class="post-header">
-      <!-- Profile picture -->
       <img :src="require('@/assets/' + post.profilePic)" alt="Profile picture" class="profile-pic">
-      <!-- Author's name and post date -->
-      <h3>{{ post.authorName }}</h3>
-      <p>{{ post.date }}</p>
+      <div class="post-details">
+        <h3>{{ post.authorName }}</h3>
+        <p>{{ post.date }}</p>
+      </div>
     </div>
-    <!-- Post image -->
-    <img :src="post.img" alt="Post image" class="post-image">
-    <!-- Post body -->
-    <p>{{ post.body }}</p>
+    <img v-if="post.img" :src="post.img" alt="Post image" class="post-image">
+    <p class="post-body">{{ post.body }}</p>
     <div class="post-footer">
-      <!-- Like button and like count -->
-      <button @click="likePost(post.id)">Like</button>
+      <img :src="require('@/assets/like.png')" alt="Like" class="like-icon" @click="likePost(post.id)">
       <span>{{ post.likes }} likes</span>
     </div>
   </div>
@@ -30,82 +27,63 @@ export default {
   },
   methods: {
     likePost(postId) {
-      // Dispatch the 'likePost' action to the Vuex store
       this.$store.dispatch('likePost', postId);
     }
   }
 }
 </script>
 
-
 <style scoped>
-*{
-  font-family: Helvetica;
+.post {
+  overflow: auto;
+  border-radius: 25px;
+  background-color: #dbd7da;
+  padding: 2%;
+  font-family: Helvetica, sans-serif;
   box-sizing: border-box;
 }
 
-.flexsection{
-  display: flex;
-  width: 100%;
-  flex-wrap: nowrap;
-  justify-content: center;
-}
-
-div.sidebar{
-  width: 20%;
-  background-color: rgba(64, 145, 86, 0.5);
-  border-radius: 25px;
-}
-
-div.posts{
-  flex-wrap: nowrap;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: space-evenly;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-div.post{
-  overflow:auto;
-  border-radius: 25px;
-  background-color: rgba(64, 145, 86, 0.5);
-  padding: 2%;
-}
-
-.postheader{
+.post-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1%;
   align-items: center;
+  margin-bottom: 1%;
 }
 
-.profilePic{
+.profile-pic {
+  border-radius: 50%;
   width: 40px;
   height: 40px;
 }
 
-.post > img + p{
+.post-details h3 {
   font-weight: bold;
 }
-.post > img ~ p{
+
+.post-details p {
   font-style: italic;
 }
 
-p {
+.post-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.post-body {
+  margin-bottom: 10px;
   text-align: left;
 }
 
-@media (max-width: 800px) {
-  .sidebar {
-    display: none;
-  }
-
-  div.posts {
-    width: 85%;
-  }
+.post-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.like-icon {
+  cursor: pointer;
+  width: 40px; /* Adjust as necessary */
+  height: 40px; /* Adjust as necessary */
+}
 </style>
