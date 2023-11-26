@@ -79,7 +79,7 @@ export default {
     width: 80%;
     margin: 20px auto;
     align-items: center;
-    height: 75vh; /* Set the height to 80% of the viewport height */
+    height: 75vh;
 }
 
 form {
