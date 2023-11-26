@@ -76,14 +76,10 @@ export default {
     flex-direction: column;
     justify-content: center;
     background-color: #a3c4b7;
-    width: 65%;
-    flex-direction: row;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    height: 750px;
-    width: 1600px;
-    margin-left: 8%;
+    width: 80%;
+    margin: 20px auto;
     align-items: center;
+    height: 75vh; /* Set the height to 80% of the viewport height */
 }
 
 form {
@@ -93,12 +89,12 @@ form {
 .button {
     background-color: #349eeb;
     font-size: 40px;
-    position: absolute;
-    bottom: 200px;
-    left: 880px;
+    position: fixed;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 25px;
 }
-
 .button:hover {
     background-color: #94b8d6;
 }
