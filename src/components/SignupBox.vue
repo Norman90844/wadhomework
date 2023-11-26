@@ -4,13 +4,11 @@
 
         <form @submit.prevent="signupWithPassword">
           <div class="box">
-            <div>
+            <div class="innerBox">
               <label class="emailLabel">
                 Email
                 <input placeholder="Email" class="emailAns" type="email" v-model="email" />
               </label>
-            </div>
-            <div>
               <label class="passLabel">
                 Password
                 <input placeholder="Password" class="passAns" type="password" v-model="password" />
@@ -77,6 +75,11 @@ export default {
 
 <style scoped>
 
+
+label {
+  font-family: Helvetica, sans-serif;
+}
+
 .signup {
     border-radius: 25px;
     display: flex;
@@ -97,11 +100,12 @@ form {
 .buttonDiv {
   margin-left: 50%;
   margin-top: 30px;
+  margin-bottom: 5px;
 }
 
 .button {
-    background-color: #349eeb;
-    font-size: 40px;
+    background-color: #3777c4;
+    font-size: 30px;
     transform: translateX(-50%);
     border-radius: 5px;
 }
@@ -113,6 +117,7 @@ form {
 .passLabel {
     font-size: 30px; 
     width: 45%;
+  margin-left: 5px;
 }
 
 .emailAns,
@@ -127,7 +132,7 @@ form {
 
 .passLabel {
     font-size: 30px;
-    padding-left: 30px;
+    padding-left: 2%;
 }
 
 .emailLabel {
