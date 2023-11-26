@@ -5,13 +5,13 @@
       <div class="sidebar">
       </div>
       <div class="posts">
-    <Post
-        v-for="post in getPosts"
-        :key="post.id"
-        :post="post"
-    />
+        <Post
+          v-for="post in getPosts"
+          :key="post.id"
+          :post="post"
+          />
         <div class="resetLikesDiv">
-    <button @click="resetLikes">Reset likes</button> <!-- This calls the Vuex action directly -->
+          <button @click="resetLikes" class="resetLikesButton">Reset likes</button> <!-- This calls the Vuex action directly -->
         </div>
         </div>
       <div class="sidebar">
@@ -87,5 +87,12 @@ div.sidebar{
   div.posts {
     width: 85%;
   }
+}
+
+.resetLikesButton {
+  width: 120px;
+  height: 40px;
+  background: #3777c4;
+  border-radius: 5px;
 }
 </style>

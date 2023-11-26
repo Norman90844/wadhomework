@@ -36,7 +36,7 @@ export default {
 .post {
   overflow: auto;
   border-radius: 25px;
-  background-color: #dbd7da;
+  background-color: rgba(64, 145, 86, 0.5);
   padding: 2%;
   font-family: Helvetica, sans-serif;
   box-sizing: border-box;
