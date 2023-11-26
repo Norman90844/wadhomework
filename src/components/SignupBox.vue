@@ -3,19 +3,25 @@
         <div id="alert" v-if="alert">{{ alert }}</div>
 
         <form @submit.prevent="signupWithPassword">
-            <label class="emailLabel">
+          <div class="box">
+            <div>
+              <label class="emailLabel">
                 Email
                 <input placeholder="Email" class="emailAns" type="email" v-model="email" />
-            </label>
-            <br>
-            <label class="passLabel">
+              </label>
+            </div>
+            <div>
+              <label class="passLabel">
                 Password
                 <input placeholder="Password" class="passAns" type="password" v-model="password" />
-            </label>
-            <br>
-            <button class="button" @click="signupWithPassword" type="submit">Signup
+              </label>
+            </div>
+            <div class="buttonDiv">
+              <button class="button" @click="signupWithPassword" type="submit">Signup
                 <span class="popuptext" id="myPopup">Invalid password. Password must be of length 8-14, start with an uppercase and include two lowercase alphabet characters, include the character '_' and include one numeric value</span>
-            </button>
+              </button>
+            </div>
+          </div>
         </form>
     </div>
 </template>
@@ -70,30 +76,34 @@ export default {
 </script>
 
 <style scoped>
+
 .signup {
     border-radius: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #a3c4b7;
-    width: 80%;
-    margin: 20px auto;
+    width: 100%;
     align-items: center;
-    height: 75vh;
+    height: 300px;
+    margin-bottom: 100px;
+    margin-top: 100px;
 }
 
 form {
     margin: auto;
 }
 
+.buttonDiv {
+  margin-left: 50%;
+  margin-top: 30px;
+}
+
 .button {
     background-color: #349eeb;
     font-size: 40px;
-    position: fixed;
-    bottom: 20%;
-    left: 50%;
     transform: translateX(-50%);
-    border-radius: 25px;
+    border-radius: 5px;
 }
 .button:hover {
     background-color: #94b8d6;

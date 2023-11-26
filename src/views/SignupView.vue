@@ -1,7 +1,10 @@
 <template>
   <div class="signup">
     <Header/>
-    <Signup/>
+    <div class="box">
+      <SignupBox/>
+    </div>
+
     <Footer/>
   </div>
 </template>
@@ -10,14 +13,29 @@
 // @ is an alias to /src
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
-import Signup from "@/components/Signup.vue";
+import SignupBox from "@/components/SignupBox.vue";
 
 export default {
   name: 'SignupView',
   components: {
-    Signup,
+    SignupBox,
     Footer,
     Header
   }
 }
 </script>
+
+<style scoped>
+  .box {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+
+  @media (max-width: 800px) {
+    .box {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+
+</style>
