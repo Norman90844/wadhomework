@@ -173,6 +173,9 @@ form {
     transform: translateX(-50%); /* Adjust translation to ensure it's centered */
     font-size: 16px; /* Adjust font size for readability */
   }
+  .emailAns, .passAns,.passLabel,.emailLabel{
+    font-size: 24px;
+  }
 }
 
 
