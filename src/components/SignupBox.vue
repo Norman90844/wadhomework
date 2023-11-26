@@ -9,6 +9,9 @@
                 Email
                 <input placeholder="Email" class="emailAns" type="email" v-model="email" />
               </label>
+            </div>
+
+            <div>
               <label class="passLabel">
                 Password
                 <input placeholder="Password" class="passAns" type="password" v-model="password" />
@@ -75,6 +78,12 @@ export default {
 
 <style scoped>
 
+.box {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+  margin-right: 2%;
+}
 
 label {
   font-family: Helvetica, sans-serif;
