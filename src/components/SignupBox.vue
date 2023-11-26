@@ -159,6 +159,18 @@ form {
     animation: fadeIn 1s;
 }
 
+@media (max-width: 800px) {
+  .popuptext {
+    width: 90vw; /* Set width relative to the viewport width */
+    max-width: 200px; /* Optional: if you want to limit how wide it can get on larger phones */
+    bottom: 20px; /* Position it just below the button */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust translation to ensure it's centered */
+    font-size: 16px; /* Adjust font size for readability */
+  }
+}
+
+
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
